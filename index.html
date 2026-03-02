@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classes</title> <link rel="icon" href="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo">KIWI<span>MATH</span></div>
+        <div class="search-box">
+            <input type="text" id="gameSearch" placeholder="Search Games...">
+        </div>
+        <nav>
+            <a href="#" onclick="showCategory('all')" class="active">Home</a>
+            <a href="#" onclick="showCategory('roblox')">Roblox</a>
+            <a href="#" onclick="showCategory('fnaf')">FNaF</a>
+            <a href="#" onclick="panic()">Exit to Drive</a>
+        </nav>
+    </div>
+
+    <main class="content">
+        <div class="grid" id="gameGrid">
+            <div class="game-card" data-category="roblox" onclick="openGame('https://www.easyfun.gg/cloud-games/roblox.html')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg" alt="Roblox">
+                <h3>Roblox</h3>
+            </div>
+
+            <div class="game-card" data-category="fnaf" onclick="openGame('https://raw.githack.com/your-source/fnaf/main/index.html')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3d/Five_Nights_at_Freddy%27s_Game_Cover.jpg" alt="FNaF">
+                <h3>FNaF 1</h3>
+            </div>
+        </div>
+
+        <div id="gameWindow" style="display:none;">
+            <button class="close-btn" onclick="closeGame()">Back to Library</button>
+            <iframe id="gameFrame" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
